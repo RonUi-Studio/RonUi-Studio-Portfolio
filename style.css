@@ -1,0 +1,836 @@
+:root {
+  /* Color variables make it easy to update the whole site from one place. */
+  --ink: #14213d;
+  --muted: #617089;
+  --paper: #ffffff;
+  --soft: #f5f7fb;
+  --line: #dfe5ef;
+  --accent: #0f766e;
+  --accent-2: #e4572e;
+  --accent-dark: #0b534d;
+  --shadow: 0 20px 45px rgba(20, 33, 61, 0.12);
+  --radius: 8px;
+}
+
+* {
+  /* This keeps padding and borders inside an element's set width. */
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+/* Images should never overflow their parent containers. */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Reusable container: keeps content centered and prevents it from touching screen edges. */
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Sticky header: stays at the top while the visitor scrolls. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+/* Navbar layout: logo on the left, menu on the right. */
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Brand/logo styling used in the header and footer. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.brand img {
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* Desktop navigation links. */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-menu a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* The checkbox and hamburger label are hidden on desktop. */
+.nav-toggle,
+.nav-toggle-label {
+  display: false;
+}
+
+/* Hero section: full-screen first section with a background image. */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 76px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: url("../assets/img/bg.jpg") center / cover no-repeat;
+}
+
+/* Dark overlay improves text readability on top of the hero image. */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 20, 38, 0.78), rgba(11, 83, 77, 0.64));
+}
+
+/* Centers the hero text and buttons above the background overlay. */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Large hero headings use clamp so they resize smoothly on different screens. */
+.hero h1,
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 22px auto 0;
+  color: rgb(255, 253, 253);
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+}
+
+/* title text is the small uppercase label above section headings. */
+.title {
+  margin: 0 0 12px;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+}
+
+.hero .title {
+  color: #8fe1d8;
+}
+
+/* Button group keeps call-to-action buttons aligned and spaced. */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+/* Base button styles shared by primary and secondary buttons. */
+.btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 0 22px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+}
+
+.btn-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.52);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Main section spacing used throughout the site. */
+.section {
+  padding: 96px 0;
+background:black;
+}
+
+/* Soft background version for sections that need visual separation. */
+.section-soft {
+  background: var(--soft);
+}
+
+/* Centers headings for sections such as Services and Portfolio. */
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+color:rgb(4, 151, 11);
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* Two-column layout used for About sections on desktop. */
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
+
+}
+
+/* Image frame gives profile/artwork images rounded corners and a shadow. */
+.media-frame {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #eaf0f7;
+  box-shadow: var(--shadow);
+}
+
+.media-frame img {
+  width: 100%;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 8px;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+/* Service cards and detailed service cards use responsive CSS Grid. */
+.service-grid,
+.detailed-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-card,
+.detailed-service,
+.info-card,
+.contact-panel,
+.contact-form {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: 0 10px 28px rgba(20, 33, 61, 0.06);
+}
+
+/* Individual service card hover effect. */
+.service-card {
+  min-height: 230px;
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover,
+.detailed-service:hover {
+  transform: translateY(-6px);
+  border-color: rgba(15, 118, 110, 0.35);
+  box-shadow: var(--shadow);
+}
+
+/* Small service labels used as simple text-based icons. */
+.service-icon {
+  display: inline-grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+/* Portfolio gallery grid. */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.portfolio-grid.large {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Portfolio item card: image plus hover overlay. */
+.portfolio-item {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #dfe5ef;
+  box-shadow: 0 12px 30px rgba(20, 33, 61, 0.09);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.07);
+}
+
+/* Overlay text shown when hovering a portfolio item. */
+.portfolio-item span {
+  position: absolute;
+  inset: auto 14px 14px;
+  display: grid;
+  gap: 2px;
+  border-radius: var(--radius);
+  padding: 14px;
+  color: #fff;
+  background: rgba(11, 20, 38, 0.78);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-item:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-item small,
+.portfolio-item em {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: normal;
+}
+
+.portfolio-item em {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  border-radius: var(--radius);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Center helper for buttons below sections. */
+.center-action {
+  margin-top: 34px;
+  text-align: center;
+}
+
+/* Page hero used on About, Services, Portfolio, and Contact pages. */
+.page-hero {
+  padding: 120px 0 76px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(20, 33, 61, 0.94), rgba(15, 118, 110, 0.82)),
+    url("../assets/img/bg.jpg") center / cover no-repeat;
+}
+
+.page-hero h1 {
+  max-width: 980px;
+  font-size: clamp(2.1rem, 5vw, 4.7rem);
+}
+
+/* Two-card page layouts used by About and Contact sections. */
+.about-grid,
+.mission-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-card,
+.detailed-service,
+.contact-panel,
+.contact-form {
+  padding: 30px;
+}
+
+/* Skill bars show a visual percentage for each skill. */
+.skill {
+  margin: 0 0 20px;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.skill div {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #d9e2ee;
+}
+
+.skill b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.detailed-service {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Portfolio filter controls. Radio buttons are hidden, labels are visible. */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.portfolio-filter > input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.filter-controls label {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 16px;
+  color: var(--muted);
+  background: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#all:checked ~ .filter-controls label[for="all"],
+#graphic:checked ~ .filter-controls label[for="graphic"],
+#web:checked ~ .filter-controls label[for="web"],
+#branding:checked ~ .filter-controls label[for="branding"],
+#uiux:checked ~ .filter-controls label[for="uiux"] {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+/* These rules decide which portfolio cards show for each selected filter. */
+#graphic:checked ~ .portfolio-grid .portfolio-item:not(.graphic),
+#web:checked ~ .portfolio-grid .portfolio-item:not(.web),
+#branding:checked ~ .portfolio-grid .portfolio-item:not(.branding),
+#uiux:checked ~ .portfolio-grid .portfolio-item:not(.uiux) {
+  display: none;
+}
+
+/* Lightbox modal: hidden by default and shown when its id is targeted in the URL. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 28px;
+  background: rgba(5, 12, 24, 0.88);
+}
+
+.lightbox:target {
+  display: grid;
+}
+
+.lightbox img {
+  width: min(980px, 94vw);
+  max-height: 82vh;
+  border-radius: var(--radius);
+  object-fit: contain;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.lightbox-close {
+  position: absolute;
+  inset: 0;
+  cursor: default;
+}
+
+/* Contact form styling. */
+.contact-grid {
+  align-items: start;
+}
+
+.contact-panel a {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--accent-dark);
+  background: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form label {
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 15px;
+  color: var(--ink);
+  font: inherit;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid rgba(15, 118, 110, 0.16);
+  border-color: var(--accent);
+}
+
+/* Map placeholder until a real embedded map is added. */
+.map-placeholder {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  background:
+    linear-gradient(90deg, rgba(20, 33, 61, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(20, 33, 61, 0.08) 1px, transparent 1px),
+    #fff;
+  background-size: 36px 36px;
+  font-weight: 900;
+}
+
+/* Footer styles. */
+.site-footer {
+  padding: 56px 0 26px;
+  color: #dce6f3;
+  background: #101827;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.site-footer h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.site-footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: #dce6f3;
+}
+
+.site-footer .brand span {
+  color: #fff;
+}
+
+.site-footer .social-links a {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.copyright {
+  width: min(1120px, calc(100% - 32px));
+  margin: 34px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #aab8ca;
+  font-size: 0.92rem;
+}
+
+/* Floating back-to-top button. */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: var(--radius);
+  color: #fff;
+  background: var(--accent);
+  box-shadow: var(--shadow);
+  font-weight: 900;
+}
+
+/* Small entrance animation used by the hero content. */
+.reveal {
+  animation: fade-up 0.9s ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet and mobile layout changes. */
+@media (max-width: 920px) {
+  .nav-toggle-label {
+    position: relative;
+    z-index: 61;
+    display: inline-grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+    content: "";
+  }
+
+  .nav-toggle-label span::before {
+    transform: translateY(-7px);
+  }
+
+  .nav-toggle-label span::after {
+    transform: translateY(5px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    display: grid;
+    gap: 6px;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--shadow);
+    transform: translateY(-130%);
+    transition: transform 0.24s ease;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    width: 100%;
+  }
+
+  .two-column,
+  .about-grid,
+  .mission-grid,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid,
+  .detailed-service-grid,
+  .portfolio-grid.large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Smaller mobile refinements. */
+@media (max-width: 620px) {
+  .container {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .brand span {
+    max-width: 150px;
+  }
+
+  .section {
+    padding: 70px 0;
+
+  }
+
+  .hero {
+    min-height: calc(100svh - 76px);
+  }
+
+  .button-group,
+  .filter-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .btn,
+  .filter-controls label {
+    width: 100%;
+  }
+
+  .service-grid,
+  .detailed-service-grid,
+  .portfolio-grid,
+  .portfolio-grid.large {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item,
+  .portfolio-item img {
+    min-height: 300px;
+  }
+
+  .portfolio-item span {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
