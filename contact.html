@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact me for graphic design, branding, web design, and frontend development work.">
+  <title>Contact | Ronui Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <!-- Header: contains the logo and navigation links. -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="46" height="46"><span>Ronui Studio</span></a>
+      <!-- CSS reads this checkbox state to show the mobile hamburger menu. -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page hero: introduces the contact page. -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Let us talk about your next design or website project.</h1>
+      </div>
+    </section>
+
+    <!-- Contact section: contact details on the left and the form on the right. -->
+    <section class="section">
+      <div class="container contact-grid">
+        <aside class="contact-panel">
+          <h2>Contact Information</h2>
+          <p><strong>Email</strong><br><a href="mailto:ronuistudio@gmail.com">ronuistudio@gmail.com</a></p>
+          <p><strong>Phone</strong><br><a href="tel:+256 793 129 937">+256 793 129 937</a></p>
+          <p><strong>Location</strong><a Mbarara, Uganda </a> </p>
+          <h3>Social Media</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
+            <a href="https://www.behance.net/" aria-label="Behance">be</a>
+          </div>
+        </aside>
+        <!-- Contact form: required, minlength, and email type provide basic browser validation. -->
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" placeholder="Your name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required minlength="3" placeholder="Project subject">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required minlength="10" placeholder="Tell me about your project"></textarea>
+          <button class="btn btn-primary" type="submit">Submit Button</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: shared bottom area across the website. -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="index.html"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="44" height="44"><span>Ronui Studio</span></a>
+      <div><h2>Quick Links</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
+      <div><h2>Social</h2><div class="social-links"><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://www.instagram.com/" aria-label="Instagram">ig</a><a href="https://www.behance.net/" aria-label="Behance">be</a></div></div>
+    </div>
+    <p class="copyright">&copy; 2026 All Rights Reserved. Designed and Developed by Ronui Studio</p>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+</body>
+</html>

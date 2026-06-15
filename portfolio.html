@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio gallery featuring graphic design, web design, branding, and UI/UX projects.">
+  <title>Portfolio | Ronui Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <!-- Header: logo and page navigation. -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="46" height="46"><span>Ronui Studio</span></a>
+      <!-- This checkbox lets CSS open and close the mobile menu without JavaScript. -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page hero: portfolio introduction. -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Portfolio</p>
+        <h1>A curated gallery of visual identity, web design, and digital interface work.</h1>
+      </div>
+    </section>
+
+    <!-- Portfolio gallery: radio buttons create CSS-only category filtering. -->
+    <section class="section">
+      <div class="container portfolio-filter">
+        <!-- Hidden radio inputs store the selected filter. -->
+        <input type="radio" name="filter" id="all" checked>
+        <input type="radio" name="filter" id="graphic">
+        <input type="radio" name="filter" id="web">
+        <input type="radio" name="filter" id="branding">
+        <input type="radio" name="filter" id="uiux">
+        <!-- Filter labels act like buttons because each label is connected to a radio input. -->
+        <div class="filter-controls" aria-label="Portfolio filters">
+          <label for="all">All</label>
+          <label for="graphic">Graphic Design</label>
+          <label for="web">Web Design</label>
+          <label for="branding">Branding</label>
+          <label for="uiux">UI/UX</label>
+        </div>
+        <!-- Project cards: each one links to a matching lightbox preview below. -->
+        <div class="portfolio-grid large">
+          <a class="portfolio-item graphic" href="#project-1"><img src="assets/portifolio/2nd last meeting-01.png" alt="2nd Last Meeting design" loading="lazy"><span><strong>2nd Last Meeting</strong><small>Graphic Design</small></span><em>Event-focused visual communication with strong hierarchy.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-2"><img src="assets/portifolio/breathe-01.png" alt="Breathe Soul Notes design" loading="lazy"><span><strong>Breathe</strong><small>Graphic Design</small></span><em>Editorial social artwork with layered image treatment.</em></a>
+          <a class="portfolio-item branding" href="#project-3"><img src="assets/portifolio/brinah collection-01-01.png" alt="Brinah Collection alternate design" loading="lazy"><span><strong>Brinah Collection</strong><small>Branding</small></span><em>Fashion brand visual asset with clean promotional styling.</em></a>
+          <a class="portfolio-item branding" href="#project-4"><img src="assets/portifolio/brinah collection-01.png" alt="Brinah Collection design" loading="lazy"><span><strong>Brinah Collection</strong><small>Branding</small></span><em>Brand-forward creative for product and audience recall.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-5"><img src="assets/portifolio/childhood trauma-01.png" alt="Childhood Trauma Soul Notes design" loading="lazy"><span><strong>Childhood Trauma</strong><small>Graphic Design</small></span><em>Story-led layout balancing mood, type, and readability.</em></a>
+          <a class="portfolio-item graphic" href="#project-6"><img src="assets/portifolio/discipline-01.png" alt="Discipline Soul Notes design" loading="lazy"><span><strong>Discipline</strong><small>Graphic Design</small></span><em>Motivational visual designed for digital engagement.</em></a>
+          <a class="portfolio-item graphic" href="#project-7"><img src="assets/portifolio/easter-01.png" alt="Easter greeting design" loading="lazy"><span><strong>Easter</strong><small>Graphic Design</small></span><em>Seasonal greeting artwork with polished presentation.</em></a>
+          <a class="portfolio-item graphic" href="#project-8"><img src="assets/portifolio/eid al adha-01.png" alt="Eid al Adha greeting design" loading="lazy"><span><strong>Eid Al Adha</strong><small>Graphic Design</small></span><em>Holiday communication designed for social channels.</em></a>
+          <a class="portfolio-item graphic" href="#project-9"><img src="assets/portifolio/good friday-01.png" alt="Good Friday design" loading="lazy"><span><strong>Good Friday</strong><small>Graphic Design</small></span><em>Faith-based visual with clean composition and tone.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-10"><img src="assets/portifolio/growth-01.png" alt="Growth Soul Notes design" loading="lazy"><span><strong>Growth</strong><small>Graphic Design</small></span><em>Readable digital layout for reflective content.</em></a>
+          <a class="portfolio-item graphic branding" href="#project-11"><img src="assets/portifolio/GUILD PRESIDENT-01.png" alt="Guild President campaign design" loading="lazy"><span><strong>Guild President</strong><small>Campaign Design</small></span><em>Election campaign poster with identity and message clarity.</em></a>
+          <a class="portfolio-item graphic" href="#project-12"><img src="assets/portifolio/labor day-01.png" alt="Labor Day design" loading="lazy"><span><strong>Labor Day</strong><small>Graphic Design</small></span><em>Public holiday creative for institutional communication.</em></a>
+          <a class="portfolio-item branding" href="#project-13"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo design" loading="lazy"><span><strong>Ronui Studio</strong><small>Logo Design</small></span><em>Logo presentation and studio identity artwork.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-14"><img src="assets/portifolio/pressure-01.png" alt="Pressure Soul Notes design" loading="lazy"><span><strong>Pressure</strong><small>Graphic Design</small></span><em>Social content layout with dramatic visual mood.</em></a>
+          <a class="portfolio-item graphic" href="#project-15"><img src="assets/portifolio/rest-01-01.png" alt="Rest alternate Soul Notes design" loading="lazy"><span><strong>Rest</strong><small>Graphic Design</small></span><em>Alternate editorial composition for reflective messaging.</em></a>
+          <a class="portfolio-item graphic" href="#project-16"><img src="assets/portifolio/rest-01.png" alt="Rest Soul Notes design" loading="lazy"><span><strong>Rest</strong><small>Graphic Design</small></span><em>Wellness-themed digital artwork with soft visual rhythm.</em></a>
+          <a class="portfolio-item graphic web" href="#project-17"><img src="assets/portifolio/soul notes 3-01-01.png" alt="Soul Notes 3 alternate design" loading="lazy"><span><strong>Soul Notes 3</strong><small>Digital Layout</small></span><em>Responsive-friendly social content with clear text structure.</em></a>
+          <a class="portfolio-item graphic web" href="#project-18"><img src="assets/portifolio/soul notes 3-01.png" alt="Soul Notes 3 design" loading="lazy"><span><strong>Soul Notes 3</strong><small>Digital Layout</small></span><em>Digital artwork balancing imagery and written content.</em></a>
+          <a class="portfolio-item graphic" href="#project-19"><img src="assets/portifolio/soul notes-01-01.png" alt="Soul Notes alternate design" loading="lazy"><span><strong>Soul Notes</strong><small>Graphic Design</small></span><em>Alternate branded social media artwork.</em></a>
+          <a class="portfolio-item graphic" href="#project-20"><img src="assets/portifolio/soul notes-01.png" alt="Soul Notes design" loading="lazy"><span><strong>Soul Notes</strong><small>Graphic Design</small></span><em>Branded post design for visual storytelling.</em></a>
+          <a class="portfolio-item graphic web" href="#project-21"><img src="assets/portifolio/soul notes2-01.png" alt="Soul Notes 2 design" loading="lazy"><span><strong>Soul Notes 2</strong><small>Digital Layout</small></span><em>Content-first digital layout with expressive imagery.</em></a>
+          <a class="portfolio-item graphic web" href="#project-22"><img src="assets/portifolio/soul notes4-01.png" alt="Soul Notes 4 design" loading="lazy"><span><strong>Soul Notes 4</strong><small>Digital Layout</small></span><em>Visual storytelling asset for social distribution.</em></a>
+          <a class="portfolio-item graphic web" href="#project-23"><img src="assets/portifolio/soul notes5-01.png" alt="Soul Notes 5 design" loading="lazy"><span><strong>Soul Notes 5</strong><small>Digital Layout</small></span><em>Editorial-style composition designed for mobile viewing.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-24"><img src="assets/portifolio/soul notes6-01-01.png" alt="Soul Notes 6 alternate design" loading="lazy"><span><strong>Soul Notes 6</strong><small>UI/UX</small></span><em>Text-heavy content system with visual hierarchy.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-25"><img src="assets/portifolio/soul notes6-01.png" alt="Soul Notes 6 design" loading="lazy"><span><strong>Soul Notes 6</strong><small>UI/UX</small></span><em>Structured layout for short-form digital reading.</em></a>
+          <a class="portfolio-item graphic" href="#project-26"><img src="assets/portifolio/soul notes7-01.png" alt="Soul Notes 7 design" loading="lazy"><span><strong>Soul Notes 7</strong><small>Graphic Design</small></span><em>Branded social post with strong emotional atmosphere.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-27"><img src="assets/portifolio/soul notes8-01-01.png" alt="Soul Notes 8 alternate design" loading="lazy"><span><strong>Soul Notes 8</strong><small>UI/UX</small></span><em>Readable content composition for digital audiences.</em></a>
+          <a class="portfolio-item graphic uiux" href="#project-28"><img src="assets/portifolio/soul notes8-01.png" alt="Soul Notes 8 design" loading="lazy"><span><strong>Soul Notes 8</strong><small>UI/UX</small></span><em>Content-led design with mobile-first readability.</em></a>
+          <a class="portfolio-item graphic" href="#project-29"><img src="assets/portifolio/thank you-01.png" alt="Thank you design" loading="lazy"><span><strong>Thank You</strong><small>Graphic Design</small></span><em>Appreciation creative with clean messaging.</em></a>
+          <a class="portfolio-item graphic branding" href="#project-30"><img src="assets/portifolio/titus labor day-01.png" alt="Titus Labor Day design" loading="lazy"><span><strong>Titus Labor Day</strong><small>Campaign Design</small></span><em>Personal brand holiday communication artwork.</em></a>
+          <a class="portfolio-item branding web" href="#project-31"><img src="assets/portifolio/vision traders-01-01.png" alt="Vision Traders design" loading="lazy"><span><strong>Vision Traders</strong><small>Branding</small></span><em>Business-focused visual identity and promotional design.</em></a>
+           <a class="portfolio-item branding web" href="#project-32"><img src="assets/img/pgm logo-01.png" alt="logo design" loading="lazy"><span><strong>PGM LOGO</strong><small>Branding</small></span><em>Business-focused visual identity and promotional design.</em></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightboxes: clicking a project opens the larger image using the :target CSS selector. -->
+  <div class="lightbox" id="project-1"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/2nd last meeting-01.png" alt="2nd Last Meeting preview"></div>
+  <div class="lightbox" id="project-2"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/breathe-01.png" alt="Breathe preview"></div>
+  <div class="lightbox" id="project-3"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/brinah collection-01-01.png" alt="Brinah Collection preview"></div>
+  <div class="lightbox" id="project-4"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/brinah collection-01.png" alt="Brinah Collection preview"></div>
+  <div class="lightbox" id="project-5"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/childhood trauma-01.png" alt="Childhood Trauma preview"></div>
+  <div class="lightbox" id="project-6"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/discipline-01.png" alt="Discipline preview"></div>
+  <div class="lightbox" id="project-7"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/easter-01.png" alt="Easter preview"></div>
+  <div class="lightbox" id="project-8"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/eid al adha-01.png" alt="Eid Al Adha preview"></div>
+  <div class="lightbox" id="project-9"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/good friday-01.png" alt="Good Friday preview"></div>
+  <div class="lightbox" id="project-10"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/growth-01.png" alt="Growth preview"></div>
+  <div class="lightbox" id="project-11"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/GUILD PRESIDENT-01.png" alt="Guild President preview"></div>
+  <div class="lightbox" id="project-12"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/labor day-01.png" alt="Labor Day preview"></div>
+  <div class="lightbox" id="project-13"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/logo.png" alt="Ronui Studio logo preview"></div>
+  <div class="lightbox" id="project-14"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/pressure-01.png" alt="Pressure preview"></div>
+  <div class="lightbox" id="project-15"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/rest-01-01.png" alt="Rest preview"></div>
+  <div class="lightbox" id="project-16"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/rest-01.png" alt="Rest preview"></div>
+  <div class="lightbox" id="project-17"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes 3-01-01.png" alt="Soul Notes 3 preview"></div>
+  <div class="lightbox" id="project-18"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes 3-01.png" alt="Soul Notes 3 preview"></div>
+  <div class="lightbox" id="project-19"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes-01-01.png" alt="Soul Notes preview"></div>
+  <div class="lightbox" id="project-20"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes-01.png" alt="Soul Notes preview"></div>
+  <div class="lightbox" id="project-21"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes2-01.png" alt="Soul Notes 2 preview"></div>
+  <div class="lightbox" id="project-22"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes4-01.png" alt="Soul Notes 4 preview"></div>
+  <div class="lightbox" id="project-23"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes5-01.png" alt="Soul Notes 5 preview"></div>
+  <div class="lightbox" id="project-24"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes6-01-01.png" alt="Soul Notes 6 preview"></div>
+  <div class="lightbox" id="project-25"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes6-01.png" alt="Soul Notes 6 preview"></div>
+  <div class="lightbox" id="project-26"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes7-01.png" alt="Soul Notes 7 preview"></div>
+  <div class="lightbox" id="project-27"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes8-01-01.png" alt="Soul Notes 8 preview"></div>
+  <div class="lightbox" id="project-28"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/soul notes8-01.png" alt="Soul Notes 8 preview"></div>
+  <div class="lightbox" id="project-29"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/thank you-01.png" alt="Thank You preview"></div>
+  <div class="lightbox" id="project-30"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/titus labor day-01.png" alt="Titus Labor Day preview"></div>
+  <div class="lightbox" id="project-31"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/vision traders-01-01.png" alt="Vision Traders preview"></div>
+
+  <!-- Footer: final navigation and social links. -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="index.html"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="44" height="44"><span>Ronui Studio</span></a>
+      <div><h2>Quick Links</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h2>Social</h2><div class="social-links"><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://www.instagram.com/" aria-label="Instagram">ig</a><a href="https://www.behance.net/" aria-label="Behance">be</a></div></div>
+    </div>
+    <p class="copyright">&copy; 2026 All Rights Reserved. Designed and Developed by Ronui Studio</p>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+</body>
+</html>
