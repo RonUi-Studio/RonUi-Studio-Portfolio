@@ -1,168 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional portfolio for graphic design, branding, web design, and frontend development projects.">
-  <title>Home | Ronui Studio</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body id="top">
-  <!-- Header: this area contains the logo and the main navigation menu. -->
-  <header class="site-header">
-    <nav class="navbar container" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="Portfolio home">
-        <img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="46" height="46">
-        <span>Ronui Studio</span>
-      </a>
-      <!-- This checkbox powers the mobile hamburger menu using CSS only. -->
-      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
-      <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
-      <ul class="nav-menu">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero section: first full-screen section visitors see on the homepage. -->
-    <section class="hero hero-home">
-      <div class="hero-overlay"></div>
-      <div class="hero-content container reveal">
-        <p class="title">Graphic Design and Web Development</p>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Graphic Designer &amp; Web Developer Creating Creative Digital Experiences</p>
-        <div class="button-group">
-          <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
-          <a class="btn btn-secondary" href="contact.html">Contact Me</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PERSONAL PORTFOLIO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="d-flex gap-4 justify-content-between align-items-center p-3">
+      <div class="d-flex gap-4 justify-content-between align-items-center p-3">
+        <img src="./logo.png" alt="logo image" width="200" />
+        <h2>RONUI STUDIO</h2>
       </div>
-    </section>
 
-    <!-- About preview: short introduction with a profile image and link to the full About page. -->
-    <section class="section about-preview">
-      <div class="container two-column">
-        <div class="media-frame">
-          <img src="assets/img/ron.jpg" alt="Ronui Studio profile portrait" loading="lazy">
-        </div>
-        <div>
-          <p class="eyebrow">About Me</p>
-          <h2>About Me</h2>
-          <p>I specialize in graphic design, branding, website design, frontend web development, and digital solutions that help brands look sharp, communicate clearly, and perform beautifully online.</p>
-          <p>My work combines strategic thinking with refined visuals, creating identities, layouts, and interfaces that feel polished, purposeful, and easy to use.</p>
-          <a class="text-link" href="about.html">Learn more about my background</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services preview: cards summarize the main services offered. -->
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What I Do</p>
-          <h2>My Services</h2>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="service-icon">GD</span>
-            <h3>Graphic Design</h3>
-            <p>Creative visual assets for campaigns, social media, print, and digital brand communication.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">LD</span>
-            <h3>Logo Design</h3>
-            <p>Distinctive marks and logo systems built for recognition, clarity, and long-term use.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">BR</span>
-            <h3>Branding</h3>
-            <p>Consistent identity systems with color, typography, tone, and practical brand guidelines.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">WD</span>
-            <h3>Web Design</h3>
-            <p>Modern website layouts with clear hierarchy, responsive structure, and premium presentation.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">FE</span>
-            <h3>Front-End Development</h3>
-            <p>Fast, accessible HTML and CSS builds that translate designs into clean web experiences.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">WM</span>
-            <h3>Website Maintenance</h3>
-            <p>Updates, improvements, and ongoing care to keep websites current, secure, and polished.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio preview: selected projects from the full portfolio page. -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>My Portfolio</h2>
-        </div>
-        <div class="portfolio-grid">
-          <a class="portfolio-item" href="#lightbox-1">
-            <img src="assets/portifolio/brinah collection-01.png" alt="Brinah Collection design project" loading="lazy">
-            <span><strong>Brinah Collection</strong><small>Branding</small></span>
-          </a>
-          <a class="portfolio-item" href="#lightbox-2">
-            <img src="assets/portifolio/vision traders-01-01.png" alt="Vision Traders design project" loading="lazy">
-            <span><strong>Vision Traders</strong><small>Branding</small></span>
-          </a>
-          <a class="portfolio-item" href="#lightbox-3">
-            <img src="assets/portifolio/GUILD PRESIDENT-01.png" alt="Guild president campaign poster" loading="lazy">
-            <span><strong>Guild Campaign</strong><small>Graphic Design</small></span>
-          </a>
-          <a class="portfolio-item" href="#lightbox-4">
-            <img src="assets/portifolio/breathe-01.png" alt="Soul Notes breathe artwork" loading="lazy">
-            <span><strong>Soul Notes</strong><small>Graphic Design</small></span>
-          </a>
-        </div>
-        <div class="center-action">
-          <a class="btn btn-primary" href="portfolio.html">Explore All Projects</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Lightboxes: each hidden preview opens when a portfolio image link is clicked. -->
-  <div class="lightbox" id="lightbox-1"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/brinah collection-01.png" alt="Brinah Collection preview"></div>
-  <div class="lightbox" id="lightbox-2"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/vision traders-01-01.png" alt="Vision Traders preview"></div>
-  <div class="lightbox" id="lightbox-3"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/GUILD PRESIDENT-01.png" alt="Guild campaign preview"></div>
-  <div class="lightbox" id="lightbox-4"><a href="#" class="lightbox-close" aria-label="Close preview"></a><img src="assets/portifolio/breathe-01.png" alt="Soul Notes preview"></div>
-
-  <!-- Footer: repeated logo, quick links, social links, and copyright text. -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <a class="brand footer-brand" href="index.html"><img src="assets/portifolio/logo.png" alt="Ronui Studio logo" width="44" height="44"><span>Ronui Studio</span></a>
       <div>
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="d-flex gap-4 list-unstyled m-0">
+          <li><a href="index.html" class="navlinks">HOME</a></li>
+          <li><a href="about.html" class="navlinks">ABOUT</a></li>
+          <li><a href="services.html" class="navlinks">SERVICES</a></li>
+          <li><a href="porfolio.html" class="navlinks">MY WORK</a></li>
         </ul>
       </div>
+
       <div>
-        <h2>Social</h2>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
-          <a href="https://www.behance.net/" aria-label="Behance">be</a>
+        <button>CONTACT ME</button>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="container row">
+      <div class="col-md-6">
+        <img src="./RON.JPG" alt="HERO IMAGE" class="img-fluid" width="500" />
+      </div>
+
+      <div class="col-md-6">
+        <h1>Hi im Ronet</h1>
+
+        <p class>
+          I create modern websites and compelling visual designs that blend
+          creativity with functionality. From responsive web applications to
+          eye-catching branding, I transform ideas into engaging digital
+          experiences.
+        </p>
+
+        <button>VIEW MY WORK</button>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section class="container row">
+      <div class="col-md-6">
+        <h4>about me</h4>
+
+        <p>
+          hi im ronet, a ui/ux designer, front end developer and a graphic
+          designer
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <img src="./bg.jpg" alt="about image" class="img-fluid" width="500" />
+      </div>
+    </section>
+
+    <!-- services section -->
+    <section>
+      <div></div>
+    </section>
+
+    <!-- portfolio section-->
+
+    <!-- product one -->
+    <section class="container">
+      <div class="row">
+        <div col-md-6>
+          <h3>marketing designs</h3>
+        </div>
+
+        <div class="col-12 d-flex gap-3">
+          <img
+            src="./brinah collection-01-01.png"
+            alt="marketing design"
+            class="img-fluid w-25"
+          />
+          <!-- two -->
+          <img
+            src="./eid al adha-01.png"
+            alt="marketing design"
+            class="img-fluid w-25"
+          />
+
+          <!-- three -->
+
+          <img
+            src="./pressure-01.png"
+            alt="marketing design"
+            class="img-fluid w-25"
+          />
+
+          <!-- four -->
+
+          <img
+            src="./thank you-01.png"
+            alt="marketing design"
+            class="img-fluid w-25"
+          />
+
+          <!-- five -->
+
+          <img
+            src="./vision traders-01-01.png"
+            alt="marketing design"
+            class="img-fluid w-25"
+          />
         </div>
       </div>
-    </div>
-    <p class="copyright">&copy; 2026 All Rights Reserved. Designed and Developed by Ronui Studio</p>
-  </footer>
-  <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
-</body>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
